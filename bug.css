@@ -1,0 +1,10 @@
+The following CSS code snippet demonstrates an uncommon error that can occur when using the `calc()` function with percentages and lengths: 
+
+```css
+div {
+  width: calc(50% - 10px);
+  background-color: lightblue;
+}
+```
+
+This code intends to create a div that occupies 50% of its container's width, minus 10 pixels. However, if the container's width is very small, the `calc()` function may result in a negative width, which is invalid and will cause the div to not render correctly or to have an unexpected width. The browser may handle negative widths in different ways, resulting in inconsistent behavior across different platforms or browser versions.
