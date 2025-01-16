@@ -1,0 +1,11 @@
+To solve this issue, we can add a `min-width` property to ensure the div never has a negative width:
+
+```css
+div {
+  width: calc(50% - 10px);
+  min-width: 0;
+  background-color: lightblue;
+}
+```
+
+The `min-width: 0;` declaration guarantees that the div's width will never be less than zero, preventing the unexpected rendering behavior.  Alternatively, more robust solutions could involve using `max()` to cap the width calculation at zero, or a more sophisticated approach to sizing depending on the container's context.
